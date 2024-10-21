@@ -10,6 +10,7 @@ from os import listdir, mkdir
 from os.path import isdir, isfile
 from biodivine_aeon import *
 from datetime import datetime
+from sync import meta_csv_summary
 from utils import inputs_free, inputs_constant, inputs_identity, output_model
 
 import json
@@ -208,8 +209,6 @@ while True:
 print(f" ... Writing BBM edition models to {OUT_DIR} ... ")
 
 mkdir(OUT_DIR)
-
-meta_csv_summary = "ID, name, variables, regulations\n"
 
 for model_dir in model_directories:
 	if check_filter(FILTER, model_dir):
